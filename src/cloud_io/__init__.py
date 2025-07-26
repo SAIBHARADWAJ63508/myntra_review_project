@@ -1,5 +1,5 @@
 import pandas as pd
-from database_connect import mongo_operation as mongo # type: ignore
+from src.database_connect import mongo_operation as mongo # Correct import
 import os, sys
 from src.constants import *
 from src.exceptions import CustomException
