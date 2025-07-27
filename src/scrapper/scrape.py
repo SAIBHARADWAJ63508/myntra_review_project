@@ -27,7 +27,7 @@ class ScrapeReviews:
 
         service = Service(executable_path=chrome_driver_path)
         # Start a new Chrome browser session
-        self.driver = webdriver.Chrome(service=Service,options=options)
+        self.driver = webdriver.Chrome(service=service,options=options)
 
         self.product_name = product_name
         self.no_of_products = no_of_products
