@@ -8,19 +8,26 @@ import os, sys
 import time
 from selenium.webdriver.chrome.options import Options 
 from urllib.parse import quote
+from selenium.webdriver.chrome.service import Service
+
 
 
 class ScrapeReviews:
     def __init__(self,
                  product_name:str,
                  no_of_products:int):
+        chrome_bin_path = "/usr/bin/chromium-browser"
+        chrome_driver_path = "/usr/lib/chromium-browser/chromedriver"
         options = Options()
-        # options.add_argument("--no-sandbox")
-        # options.add_argument("--disable-dev-shm-usage")
-        # options.add_argument('--headless')
-        
+        options.binary_location = chrome_bin_path
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument('--headless')
+        options.add_argument("--disable-gpu")
+
+        service = Service(executable_path=chrome_driver_path)
         # Start a new Chrome browser session
-        self.driver = webdriver.Chrome(options=options)
+        self.driver = webdriver.Chrome(service=Service,options=options)
 
         self.product_name = product_name
         self.no_of_products = no_of_products
