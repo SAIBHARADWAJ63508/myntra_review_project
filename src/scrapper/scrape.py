@@ -18,14 +18,14 @@ class ScrapeReviews:
                  no_of_products:int):
         # chrome_bin_path = "/usr/bin/chromium-browser"
         # chrome_driver_path = "/usr/lib/chromium-browser/chromedriver"
-        # options = Options()
+         options = Options()
         # options.binary_location = chrome_bin_path
         # options.add_argument("--no-sandbox")
         # options.add_argument("--disable-dev-shm-usage")
         # options.add_argument('--headless')
         # options.add_argument("--disable-gpu")
 
-        service = Service(executable_path=chrome_driver_path)
+        # service = Service(executable_path=chrome_driver_path)
         # Start a new Chrome browser session
         self.driver = webdriver.Chrome(options=options)
 
