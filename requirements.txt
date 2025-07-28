@@ -2,7 +2,7 @@ bs4==0.0.1
 chromedriver-binary==121.0.6115.2.0
 database-connect==0.1.66
 flask-cors==4.0.0
-gunicorn==21.2.0
+
 ipykernel==6.26.0
 plotly==5.18.0
 pysocks==1.7.1
